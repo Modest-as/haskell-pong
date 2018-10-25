@@ -18,3 +18,7 @@
 ### Generate Documentation
 
 * `cabal haddock --executables`
+
+### VS Code Formatter
+
+* `stylish-haskell` - bad, not very opinionated 
