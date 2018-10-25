@@ -19,7 +19,10 @@ drawing :: Picture
 drawing = circleSolid 20
 
 main :: IO ()
-main = display window background drawing
+main = animate window background frame
+  where
+    frame :: Float -> Picture
+    frame seconds = render $ moveBall seconds initialState
 
 -- | Data describing the state of the pong game
 data PongGame = Game 
@@ -72,3 +75,18 @@ render game =
             ]
 
         paddleColor = light (light blue)
+
+-- | Update the ball position using its current velocity.
+moveBall :: Float    -- ^ The number of seconds since last update
+         -> PongGame -- ^ The initial game state
+         -> PongGame -- ^ A new game state with an updated ball position
+
+moveBall seconds game = game { ballLoc = (x', y') }
+  where
+    -- Old locations and velocities.
+    (x, y) = ballLoc game
+    (vx, vy) = ballVel game
+
+    -- New locations.
+    x' = x + vx * seconds
+    y' = y + vy * seconds
