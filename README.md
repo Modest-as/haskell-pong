@@ -14,3 +14,7 @@
 * Run code: `cabal run`
 * Run `cabal clean` if you want to get rid of old compiled files from the `dist` folder
 * Alternatively you can build the exe using `cabal build` and run it using `./dist/build/haskell-pong/haskell-pong`
+
+### Generate Documentation
+
+* `cabal haddock --executables`
