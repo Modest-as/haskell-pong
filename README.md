@@ -9,6 +9,8 @@
 * Create package: `cabal init`
 * Install dependency: `cabal install gloss==1.13.*`
 
+**NOTE** For other projects use `stack` instead of `cabal`.
+
 ### Dev Process
 
 * Run code: `cabal run`
@@ -22,3 +24,4 @@
 ### VS Code Formatter
 
 * `stylish-haskell` - bad, not very opinionated 
+* **UPDATE** use `hindent` insteads
