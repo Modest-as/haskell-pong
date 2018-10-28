@@ -24,4 +24,11 @@
 ### VS Code Formatter
 
 * `stylish-haskell` - bad, not very opinionated 
-* **UPDATE** use `hindent` insteads
+* **UPDATE** use `hindent` instead
+	* Install `stack`: `curl -sSL https://get.haskellstack.org/ | sh`. There is some sort of weird bug if you use `apt-get` on later debian distros.
+	* Install `hindent`: `stack install hindent`
+	* If use `VS Code` install `hindent-format`
+
+### Demo
+
+![demo](demo.png?raw=true)
